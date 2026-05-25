@@ -90,11 +90,11 @@ CREATE TABLE IF NOT EXISTS dados_contato(
 
 ### Interface do programa
 
-![Interface do programa](imagens/tela_principal.ppg)
+![Interface do programa](imagens/tela_principal.png)
 
 ### Cadastro de contato
 
-![Cadastro de contato](imagens/cadastro_contato.ppg)
+![Cadastro de contato](imagens/cadastro_contato.png)
 
 ## Observação
 
