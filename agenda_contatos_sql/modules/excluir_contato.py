@@ -20,7 +20,15 @@ def excluir_contato():
         else:
             cursor.execute("""DELETE FROM dados_contato
                         WHERE id = ?""", (escolha_id,))
+
+            cursor.execute("SELECT COUNT(*) FROM dados_contato")
+            quantidade = cursor.fetchone()[0]
+
+            if quantidade == 0:
+                cursor.execute("DELETE FROM sqlite_sequence WHERE name = 'dados_contato'")
+
             print("CONTATO REMOVIDO COM SUCESSO!")
+            
             conexao.commit()
     except ValueError:
         print("Digite apenas números...")
